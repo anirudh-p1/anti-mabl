@@ -1,0 +1,22 @@
+sensor:
+  type: temperature
+  sensitivity: high
+
+data_processing:
+  method: filter
+  threshold: 0.05
+
+model:
+  type: regression
+  parameters:
+    learning_rate: 0.01
+    epochs: 1000
+
+resistance_control:
+  thresholds:
+    min: 1.0
+    max: 5.0
+
+safety_limits:
+  max_temperature: 100.0
+  min_resistance: 0.5
